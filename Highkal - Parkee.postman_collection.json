@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "ed1053be-5e9a-46ec-a04c-fe32d50b5e5a",
+		"name": "Highkal - Parkee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19908125"
+	},
+	"item": [
+		{
+			"name": "Positive Case",
+			"item": [
+				{
+					"name": "Response Body Contains usrID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response body contains user ID\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property('id');\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"page\": 1,\r\n    \"per_page\": 6,\r\n    \"total\": 12,\r\n    \"total_pages\": 2,\r\n    \"data\": [\r\n        {\r\n            \"id\": 1,\r\n            \"email\": \"george.bluth@reqres.in\",\r\n            \"first_name\": \"George\",\r\n            \"last_name\": \"Bluth\",\r\n            \"avatar\": \"https://reqres.in/img/faces/1-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"email\": \"janet.weaver@reqres.in\",\r\n            \"first_name\": \"Janet\",\r\n            \"last_name\": \"Weaver\",\r\n            \"avatar\": \"https://reqres.in/img/faces/2-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"email\": \"emma.wong@reqres.in\",\r\n            \"first_name\": \"Emma\",\r\n            \"last_name\": \"Wong\",\r\n            \"avatar\": \"https://reqres.in/img/faces/3-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"email\": \"eve.holt@reqres.in\",\r\n            \"first_name\": \"Eve\",\r\n            \"last_name\": \"Holt\",\r\n            \"avatar\": \"https://reqres.in/img/faces/4-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"email\": \"charles.morris@reqres.in\",\r\n            \"first_name\": \"Charles\",\r\n            \"last_name\": \"Morris\",\r\n            \"avatar\": \"https://reqres.in/img/faces/5-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 6,\r\n            \"email\": \"tracey.ramos@reqres.in\",\r\n            \"first_name\": \"Tracey\",\r\n            \"last_name\": \"Ramos\",\r\n            \"avatar\": \"https://reqres.in/img/faces/6-image.jpg\"\r\n        }\r\n    ],\r\n    \"support\": {\r\n        \"url\": \"https://reqres.in/#support-heading\",\r\n        \"text\": \"To keep ReqRes free, contributions towards server costs are appreciated!\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reqres.in/api/users",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Testing"
+					},
+					"response": []
+				},
+				{
+					"name": "Create User Successfully",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Create User Successfully\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property('id');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"page\": 1,\r\n    \"per_page\": 6,\r\n    \"total\": 12,\r\n    \"total_pages\": 2,\r\n    \"data\": [\r\n        {\r\n            \"id\": 1,\r\n            \"email\": \"george.bluth@reqres.in\",\r\n            \"first_name\": \"George\",\r\n            \"last_name\": \"Bluth\",\r\n            \"avatar\": \"https://reqres.in/img/faces/1-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"email\": \"janet.weaver@reqres.in\",\r\n            \"first_name\": \"Janet\",\r\n            \"last_name\": \"Weaver\",\r\n            \"avatar\": \"https://reqres.in/img/faces/2-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"email\": \"emma.wong@reqres.in\",\r\n            \"first_name\": \"Emma\",\r\n            \"last_name\": \"Wong\",\r\n            \"avatar\": \"https://reqres.in/img/faces/3-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"email\": \"eve.holt@reqres.in\",\r\n            \"first_name\": \"Eve\",\r\n            \"last_name\": \"Holt\",\r\n            \"avatar\": \"https://reqres.in/img/faces/4-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"email\": \"charles.morris@reqres.in\",\r\n            \"first_name\": \"Charles\",\r\n            \"last_name\": \"Morris\",\r\n            \"avatar\": \"https://reqres.in/img/faces/5-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 6,\r\n            \"email\": \"tracey.ramos@reqres.in\",\r\n            \"first_name\": \"Tracey\",\r\n            \"last_name\": \"Ramos\",\r\n            \"avatar\": \"https://reqres.in/img/faces/6-image.jpg\"\r\n        }\r\n    ],\r\n    \"support\": {\r\n        \"url\": \"https://reqres.in/#support-heading\",\r\n        \"text\": \"To keep ReqRes free, contributions towards server costs are appreciated!\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reqres.in/api/users",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Testing"
+					},
+					"response": []
+				},
+				{
+					"name": "Create User with Optional Fields",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Create User with Optional Fields\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property('id');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"page\": 1,\r\n    \"per_page\": 6,\r\n    \"total\": 12,\r\n    \"total_pages\": 2,\r\n    \"data\": [\r\n        {\r\n            \"id\": 1,\r\n            \"email\": \"george.bluth@reqres.in\",\r\n            \"first_name\": \"George\",\r\n            \"last_name\": \"Bluth\",\r\n            \"avatar\": \"https://reqres.in/img/faces/1-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"email\": \"janet.weaver@reqres.in\",\r\n            \"first_name\": \"Janet\",\r\n            \"last_name\": \"Weaver\",\r\n            \"avatar\": \"https://reqres.in/img/faces/2-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"email\": \"emma.wong@reqres.in\",\r\n            \"first_name\": \"Emma\",\r\n            \"last_name\": \"Wong\",\r\n            \"avatar\": \"https://reqres.in/img/faces/3-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"email\": \"eve.holt@reqres.in\",\r\n            \"first_name\": \"Eve\",\r\n            \"last_name\": \"Holt\",\r\n            \"avatar\": \"https://reqres.in/img/faces/4-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"email\": \"charles.morris@reqres.in\",\r\n            \"first_name\": \"Charles\",\r\n            \"last_name\": \"Morris\",\r\n            \"avatar\": \"https://reqres.in/img/faces/5-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 6,\r\n            \"email\": \"tracey.ramos@reqres.in\",\r\n            \"first_name\": \"Tracey\",\r\n            \"last_name\": \"Ramos\",\r\n            \"avatar\": \"https://reqres.in/img/faces/6-image.jpg\"\r\n        }\r\n    ],\r\n    \"support\": {\r\n        \"url\": \"https://reqres.in/#support-heading\",\r\n        \"text\": \"To keep ReqRes free, contributions towards server costs are appreciated!\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reqres.in/api/users",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Testing"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Negative Case",
+			"item": [
+				{
+					"name": "Missing Response",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 500\", function () {\r",
+									"    pm.response.to.have.status(500);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"page\": 1,\r\n    \"per_page\": 6,\r\n    \"total\": 12,\r\n    \"total_pages\": 2,\r\n    \"data\": [\r\n        {\r\n            \"id\": 1,\r\n            \"email\": \"george.bluth@reqres.in\",\r\n            \"first_name\": \"George\",\r\n            \"last_name\": \"Bluth\",\r\n            \"avatar\": \"https://reqres.in/img/faces/1-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"email\": \"janet.weaver@reqres.in\",\r\n            \"first_name\": \"Janet\",\r\n            \"last_name\": \"Weaver\",\r\n            \"avatar\": \"https://reqres.in/img/faces/2-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"email\": \"emma.wong@reqres.in\",\r\n            \"first_name\": \"Emma\",\r\n            \"last_name\": \"Wong\",\r\n            \"avatar\": \"https://reqres.in/img/faces/3-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"email\": \"eve.holt@reqres.in\",\r\n            \"first_name\": \"Eve\",\r\n            \"last_name\": \"Holt\",\r\n            \"avatar\": \"https://reqres.in/img/faces/4-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"email\": \"charles.morris@reqres.in\",\r\n            \"first_name\": \"Charles\",\r\n            \"last_name\": \"Morris\",\r\n            \"avatar\": \"https://reqres.in/img/faces/5-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 6,\r\n            \"email\": \"tracey.ramos@reqres.in\",\r\n            \"first_name\": \"Tracey\",\r\n            \"last_name\": \"Ramos\",\r\n            \"avatar\": \"https://reqres.in/img/faces/6-image.jpg\"\r\n        }\r\n    ],\r\n    \"support\": {\r\n        \"url\": \"https://reqres.in/#support-heading\",\r\n        \"text\": \"To keep ReqRes free, contributions towards server costs are appreciated!\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reqres.in/api/users",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Testing"
+					},
+					"response": []
+				},
+				{
+					"name": "Missing Request Body Field",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response body contains error message\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property('error');\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"page\": 1,\r\n    \"per_page\": 6,\r\n    \"total\": 12,\r\n    \"total_pages\": 2,\r\n    \"data\": [\r\n        {\r\n            \"id\": 1,\r\n            \"email\": \"george.bluth@reqres.in\",\r\n            \"first_name\": \"George\",\r\n            \"last_name\": \"Bluth\",\r\n            \"avatar\": \"https://reqres.in/img/faces/1-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"email\": \"janet.weaver@reqres.in\",\r\n            \"first_name\": \"Janet\",\r\n            \"last_name\": \"Weaver\",\r\n            \"avatar\": \"https://reqres.in/img/faces/2-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"email\": \"emma.wong@reqres.in\",\r\n            \"first_name\": \"Emma\",\r\n            \"last_name\": \"Wong\",\r\n            \"avatar\": \"https://reqres.in/img/faces/3-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"email\": \"eve.holt@reqres.in\",\r\n            \"first_name\": \"Eve\",\r\n            \"last_name\": \"Holt\",\r\n            \"avatar\": \"https://reqres.in/img/faces/4-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"email\": \"charles.morris@reqres.in\",\r\n            \"first_name\": \"Charles\",\r\n            \"last_name\": \"Morris\",\r\n            \"avatar\": \"https://reqres.in/img/faces/5-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 6,\r\n            \"email\": \"tracey.ramos@reqres.in\",\r\n            \"first_name\": \"Tracey\",\r\n            \"last_name\": \"Ramos\",\r\n            \"avatar\": \"https://reqres.in/img/faces/6-image.jpg\"\r\n        }\r\n    ],\r\n    \"support\": {\r\n        \"url\": \"https://reqres.in/#support-heading\",\r\n        \"text\": \"To keep ReqRes free, contributions towards server costs are appreciated!\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reqres.in/api/users",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Testing"
+					},
+					"response": []
+				},
+				{
+					"name": "Response Not Equals with Request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Mismatched Name in Response\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"    var requestJson = pm.request.json();\r",
+									"    var responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.name).to.not.equal(requestJson.name);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Mismatched Job in Response\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"    var requestJson = pm.request.json();\r",
+									"    var responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.job).to.not.equal(requestJson.job);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"page\": 1,\r\n    \"per_page\": 6,\r\n    \"total\": 12,\r\n    \"total_pages\": 2,\r\n    \"data\": [\r\n        {\r\n            \"id\": 1,\r\n            \"email\": \"george.bluth@reqres.in\",\r\n            \"first_name\": \"George\",\r\n            \"last_name\": \"Bluth\",\r\n            \"avatar\": \"https://reqres.in/img/faces/1-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"email\": \"janet.weaver@reqres.in\",\r\n            \"first_name\": \"Janet\",\r\n            \"last_name\": \"Weaver\",\r\n            \"avatar\": \"https://reqres.in/img/faces/2-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"email\": \"emma.wong@reqres.in\",\r\n            \"first_name\": \"Emma\",\r\n            \"last_name\": \"Wong\",\r\n            \"avatar\": \"https://reqres.in/img/faces/3-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"email\": \"eve.holt@reqres.in\",\r\n            \"first_name\": \"Eve\",\r\n            \"last_name\": \"Holt\",\r\n            \"avatar\": \"https://reqres.in/img/faces/4-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"email\": \"charles.morris@reqres.in\",\r\n            \"first_name\": \"Charles\",\r\n            \"last_name\": \"Morris\",\r\n            \"avatar\": \"https://reqres.in/img/faces/5-image.jpg\"\r\n        },\r\n        {\r\n            \"id\": 6,\r\n            \"email\": \"tracey.ramos@reqres.in\",\r\n            \"first_name\": \"Tracey\",\r\n            \"last_name\": \"Ramos\",\r\n            \"avatar\": \"https://reqres.in/img/faces/6-image.jpg\"\r\n        }\r\n    ],\r\n    \"support\": {\r\n        \"url\": \"https://reqres.in/#support-heading\",\r\n        \"text\": \"To keep ReqRes free, contributions towards server costs are appreciated!\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reqres.in/api/users",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Testing"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,226 @@
+{
+	"id": "8d15b174-b103-4f11-a344-dd29d94eff5e",
+	"name": "Highkal - Parkee",
+	"timestamp": "2024-03-02T05:16:59.916Z",
+	"collection_id": "19908125-ed1053be-5e9a-46ec-a04c-fe32d50b5e5a",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 4,
+	"delay": "1000",
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-03-02T05:16:50.685Z",
+	"totalFail": 5,
+	"results": [
+		{
+			"id": "bb2dafcf-ea43-4b49-9278-31eef75d9e93",
+			"name": "Response Body Contains usrID",
+			"url": "https://reqres.in/api/users",
+			"time": 478,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Response body contains user ID": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body contains user ID": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				478
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Response body contains user ID": true
+				}
+			]
+		},
+		{
+			"id": "3a3d9812-a373-4ec1-b279-4783e42f633b",
+			"name": "Create User Successfully",
+			"url": "https://reqres.in/api/users",
+			"time": 479,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Create User Successfully": true
+			},
+			"testPassFailCounts": {
+				"Create User Successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				479
+			],
+			"allTests": [
+				{
+					"Create User Successfully": true
+				}
+			]
+		},
+		{
+			"id": "c502a0d9-0779-4234-9bec-2f7a347ff016",
+			"name": "Create User with Optional Fields",
+			"url": "https://reqres.in/api/users",
+			"time": 494,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Create User with Optional Fields": true
+			},
+			"testPassFailCounts": {
+				"Create User with Optional Fields": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				494
+			],
+			"allTests": [
+				{
+					"Create User with Optional Fields": true
+				}
+			]
+		},
+		{
+			"id": "3b5768c9-cd6c-42c5-9bb5-a58ae78b5d87",
+			"name": "Missing Response",
+			"url": "https://reqres.in/api/users",
+			"time": 485,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 500": false
+			},
+			"testPassFailCounts": {
+				"Status code is 500": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				485
+			],
+			"allTests": [
+				{
+					"Status code is 500": false
+				}
+			]
+		},
+		{
+			"id": "3a0e7f2b-7369-4d47-adc9-7f29bf91f746",
+			"name": "Missing Request Body Field",
+			"url": "https://reqres.in/api/users",
+			"time": 483,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Response body contains error message": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response body contains error message": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				483
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Response body contains error message": false
+				}
+			]
+		},
+		{
+			"id": "a3100158-179f-483e-8591-50ccf13b2f82",
+			"name": "Response Not Equals with Request",
+			"url": "https://reqres.in/api/users",
+			"time": 469,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Mismatched Name in Response": false,
+				"Mismatched Job in Response": false
+			},
+			"testPassFailCounts": {
+				"Mismatched Name in Response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Mismatched Job in Response": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				469
+			],
+			"allTests": [
+				{
+					"Mismatched Name in Response": false,
+					"Mismatched Job in Response": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2888,
+	"collection": {
+		"requests": [
+			{
+				"id": "bb2dafcf-ea43-4b49-9278-31eef75d9e93",
+				"method": "POST"
+			},
+			{
+				"id": "3a3d9812-a373-4ec1-b279-4783e42f633b",
+				"method": "POST"
+			},
+			{
+				"id": "c502a0d9-0779-4234-9bec-2f7a347ff016",
+				"method": "POST"
+			},
+			{
+				"id": "3b5768c9-cd6c-42c5-9bb5-a58ae78b5d87",
+				"method": "POST"
+			},
+			{
+				"id": "3a0e7f2b-7369-4d47-adc9-7f29bf91f746",
+				"method": "POST"
+			},
+			{
+				"id": "a3100158-179f-483e-8591-50ccf13b2f82",
+				"method": "POST"
+			}
+		]
+	}
+}
