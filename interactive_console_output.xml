@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.1 on win32)" generated="20240302 13:05:50.698" rpa="false" schemaversion="4">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\Nugraha Mangkudilaga\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${user_data}</var>
+<arg>name=John</arg>
+<arg>job=developer</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20240302 13:05:51.833" level="INFO">${user_data} = {'name': 'John', 'job': 'developer'}</msg>
+<status status="PASS" starttime="20240302 13:05:51.832" endtime="20240302 13:05:51.833"/>
+</kw>
+<kw name="Create User">
+<var>${response}</var>
+<arg>${user_data}</arg>
+<msg timestamp="20240302 13:05:51.835" level="FAIL">No keyword with name 'Create User' found.</msg>
+<status status="FAIL" starttime="20240302 13:05:51.835" endtime="20240302 13:05:51.835"/>
+</kw>
+<kw name="Check Response">
+<arg>${response}</arg>
+<arg>201</arg>
+<status status="NOT RUN" starttime="20240302 13:05:51.838" endtime="20240302 13:05:51.838"/>
+</kw>
+<status status="PASS" starttime="20240302 13:05:50.736" endtime="20240302 13:10:15.043"/>
+</kw>
+<status status="PASS" starttime="20240302 13:05:50.736" endtime="20240302 13:10:15.044"/>
+</test>
+<status status="PASS" starttime="20240302 13:05:50.700" endtime="20240302 13:10:15.046"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
